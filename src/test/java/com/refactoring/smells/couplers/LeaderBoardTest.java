@@ -2,12 +2,8 @@ package com.refactoring.smells.couplers;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
 
-import com.refactoring.smells.couplers.KDA;
-import com.refactoring.smells.couplers.LeaderBoard;
-import com.refactoring.smells.couplers.Player;
-import com.refactoring.smells.couplers.Score;
+import java.util.ArrayList;
 
 class LeaderBoardTest {
 
@@ -26,7 +22,7 @@ class LeaderBoardTest {
         LeaderBoard leaderBoard = new LeaderBoard(players);
         String print = leaderBoard.print();
 
-        Assertions.assertEquals("Peter 10/0/0\n" +
-                "Martin 0/0/10\n", print);
+        Assertions.assertEquals("Peter 10/0/0/20\n" +
+                "Martin 0/0/10/10\n", print);
     }
 }
