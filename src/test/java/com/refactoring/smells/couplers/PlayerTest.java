@@ -9,10 +9,12 @@ class PlayerTest {
     @Test
     void shouldSetUpCorrectly() {
         Score score = new Score();
-        KDA kda = new KDA(10, 10, 10, score);
-        Player player = new Player("Elvira", kda);
+        Points points = new Points(score);
+        Player player = new Player("Elvira", points);
+        player.wins(10);
+        player.loses(2);
         assertEquals(player.getName(), "Elvira");
-        assertNotNull(player.getKda());
+        assertNotNull(player.getPoints());
     }
 
 }

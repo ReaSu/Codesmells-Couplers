@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class ScoreTest {
 
     @Test
-    void shouldCalculateTotalScore() {
+    void shouldReturnRating() {
         Score score = new Score();
-        KDA kda = new KDA(10, 10, 10, score);
-        int result = score.totalScore();
-        assertEquals(-20, result);
+        score.setWins(10);
+        score.setLosses(2);
+        assertEquals("Bad", score.getRating());
     }
 }

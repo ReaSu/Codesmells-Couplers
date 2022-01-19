@@ -2,25 +2,39 @@ package com.refactoring.smells.couplers;
 
 public class Score {
 
-    public int killFactor = 2;
-    public int deathFactor = 5;
-    KDA kda;
+    private int wins = 0;
+    private int losses = 0;
+    private Points points;
 
-    public void setKda(KDA kda) {
-        this.kda = kda;
+    public String getRating() {
+        if(points.getTotal() < 10) {
+            return "Bad";
+        } else if(points.getTotal() < 20) {
+            return "OK";
+        } else if(points.getTotal() < 30) {
+            return "Good";
+        } else {
+            return "Excellent";
+        }
     }
 
-    public void setKillFactor(int killFactor) {
-        this.killFactor = killFactor;
+    public int getWins() {
+        return wins;
     }
 
-    public void setDeathFactor(int deathFactor) {
-        this.deathFactor = deathFactor;
+    public void setWins(int wins) {
+        this.wins = wins;
     }
 
-    public int totalScore() {
-        return kda.getKills() * killFactor
-               - kda.getDeaths() * deathFactor
-               + kda.getAssists();
+    public int getLosses() {
+        return losses;
+    }
+
+    public void setLosses(int losses) {
+        this.losses = losses;
+    }
+
+    public void setPoints(Points points) {
+        this.points = points;
     }
 }
