@@ -22,8 +22,7 @@ public class Score {
 
     public int totalScore() {
         return getKills() * 2
-            - getDeaths() * 5
-            + getAssists();
+               - getDeaths() * 5
+               + getAssists();
     }
-
 }

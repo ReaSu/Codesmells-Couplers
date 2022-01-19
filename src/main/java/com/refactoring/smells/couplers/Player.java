@@ -17,5 +17,4 @@ public class Player {
     public KDA getKda() {
         return kda;
     }
-
 }

@@ -15,7 +15,6 @@ public class KDA {
         score.setKda(this);
     }
 
-
     public int getKills() {
         return kills;
     }
@@ -31,5 +30,4 @@ public class KDA {
     public int getTotalScore() {
         return score.totalScore();
     }
-
 }
