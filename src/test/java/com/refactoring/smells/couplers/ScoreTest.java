@@ -9,8 +9,9 @@ class ScoreTest {
     @Test
     void shouldReturnRating() {
         Score score = new Score();
-        score.setWins(10);
-        score.setLosses(2);
+        Points points = new Points(score);
+        points.setWins(10);
+        points.setLosses(2);
         assertEquals("Bad", score.getRating());
     }
 }
