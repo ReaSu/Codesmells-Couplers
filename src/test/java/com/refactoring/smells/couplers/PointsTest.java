@@ -6,15 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PointsTest {
     @Test
-    public void shouldReturnTotalScore() {
-        Score score = new Score();
-        Points points = new Points(score);
-        points.setWins(50);
-        points.setLosses(23);
-        assertEquals("Good", points.score.getRating());
-    }
-
-    @Test
     void shouldReturnWins() {
         Score score = new Score();
         Points points = new Points(score);
@@ -39,5 +30,14 @@ class PointsTest {
         points.setWins(50);
         points.setLosses(23);
         assertEquals(50-23, points.getTotal());
+    }
+
+    @Test
+    public void shouldReturnTotalScore() {
+        Score score = new Score();
+        Points points = new Points(score);
+        points.setWins(50);
+        points.setLosses(23);
+        assertEquals("Good", points.score.getRating());
     }
 }
