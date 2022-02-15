@@ -11,10 +11,8 @@ class ScoreBoardTest {
     void print() {
         Score score1 = new Score();
         Score score2 = new Score();
-        Points points1 = new Points(score1);
-        Points points2 = new Points(score2);
-        Player peter = new Player("Andrea", points1);
-        Player martin = new Player("Robin", points2);
+        Player peter = new Player("Andrea", score1);
+        Player martin = new Player("Robin", score2);
         ArrayList<Player> players = new ArrayList<>();
         players.add(peter);
         players.add(martin);

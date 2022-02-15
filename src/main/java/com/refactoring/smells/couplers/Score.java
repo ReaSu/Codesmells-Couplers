@@ -4,14 +4,13 @@ public class Score {
 
     private int wins = 0;
     private int losses = 0;
-    private Points points;
 
     public String getRating() {
-        if(points.getTotal() < 10) {
+        if(getTotal() < 10) {
             return "Bad";
-        } else if(points.getTotal() < 20) {
+        } else if(getTotal() < 20) {
             return "OK";
-        } else if(points.getTotal() < 30) {
+        } else if(getTotal() < 30) {
             return "Good";
         } else {
             return "Excellent";
@@ -34,7 +33,7 @@ public class Score {
         this.losses = losses;
     }
 
-    public void setPoints(Points points) {
-        this.points = points;
+    public int getTotal() {
+        return getWins() - getLosses();
     }
 }

@@ -3,26 +3,28 @@ package com.refactoring.smells.couplers;
 public class Player {
 
     private final String name;
-    private final Points points;
+    private final Score score;
 
-    public Player(final String name, final Points points) {
+    public Player(final String name, Score score) {
         this.name = name;
-        this.points = points;
+        this.score = score;
     }
 
     public String getName() {
         return name;
     }
 
-    public Points getPoints() {
-        return points;
-    }
-
     public void wins(int points) {
-        this.points.setWins(points);
+        score.setWins(points);
     }
 
     public void loses(int points) {
-        this.points.setLosses(points);
+        score.setLosses(points);
+    }
+
+    String getResults() {
+        return getName()
+               + ", Total: " + score.getTotal()
+               + ", Rating: " + score.getRating();
     }
 }
